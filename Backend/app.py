@@ -24,6 +24,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 chat = model.start_chat()
 
 # Route to handle chat messages
+
 @app.route("/chat", methods=["POST"])
 def chat_with_gemini():
     print("📥 /chat route hit")

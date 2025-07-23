@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/chat', { message });
+      const res = await axios.post('https://gemini-ai-assistant.onrender.com/chat', { message });
       const botReply = { sender: 'bot', text: res.data.reply };
       setChatHistory((prev) => [...prev, botReply]);
     } catch (error) {
